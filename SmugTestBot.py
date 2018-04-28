@@ -23,6 +23,12 @@ async def on_ready():
 async def wait_until_login():
     await client.change_status(game=discord.Game(name='something goes here'))
 
+@client.event
+async def on_member_join(member):
+    admin = "438702024918302734" in [client.role.id]
+    User = member
+    await client.send_message(admin, "Welcome %s, to Smuggie's Ark. It's dangerous out there, better not go it alone, we are all here to help you survive! \n If its Dino Stats your after head to the #dino channel and type !help for a list of commands where John can help you. \n If its recipe details you need jump onto the #recipe channel and enter the command !help to find out how Chef can help you. Thanks for joining the Ark." % (User.mention))
+
 #@client.event
 #async def on_member_role(roles):
 #    User = member
