@@ -94,7 +94,7 @@ async def on_message(message):
             await client.send_message(message.channel, embed=em_k_f("Bronto", "\u200b \t 1x Bronto Egg \n \t 1x Rockarrot \n \t 1x Cooked Meat Jerky \n \t 2x Mejoberries \n \t 3x Fiber \n \t 1x Waterskin", "Sabertooth"))
         elif e_w_k_f('CARNO EGG', '8'):
             await client.send_message(message.channel, embed=em_k_f("Carno", "\u200b \t 1x Carno Egg \n \t 1x Savoroot \n \t 1x Cooked Meat \n \t 2x Mejoberries \n \t 3x Fiber \n \t 1x Waterskin", "Trike, Direwolf, Direbear"))
-        elif e_w_k_f('COMPY EGG' '9'):
+        elif e_w_k_f('COMPY EGG', '9'):
             await client.send_message(message.channel, embed=em_k_f("Compy", "\u200b \t 1x Compy Egg \n \t 1x Citronal \n \t 1x Cooked Fish Meat \n \t 2x Mejoberries \n \t 3x Fiber \n \t 1x Waterskin", "Kentrosaurus"))
         elif message.content.upper().endswith('DILO EGG') or message.content.upper().endswith('10'):
             embed = discord.Embed(title="Dilo Egg", description="This recipe is used to make Kibble (Dilo egg)", color=0x00ff00)
@@ -268,7 +268,6 @@ async def on_message(message):
             await client.send_message(message.channel, embed=embed)
         elif message.content.upper().endswith('SPINO EGG') or message.content.upper().endswith('44'):
             embed = discord.Embed(title="Spino Egg", description="This recipe is used to make Kibble (Spino egg)", color=0x00ff00)
-
             embed.add_field(name="Ingredients", value="\u200b \t 1x Spino Egg \n \t 1x Savoroot \n \t 1x Prime Meat Jerky \n \t 2x Mejoberries \n \t 3x Fiber \n \t 1x Waterskin", inline=False)
             embed.add_field(name="Dino Taming", value="Megalodon", inline=False)
             await client.send_message(message.channel, embed=embed)
@@ -322,10 +321,10 @@ async def on_message(message):
             embed.add_field(name="Ingredients", value="\u200b \t 1x Vulture Egg \n \t 1x Longrass \n \t 1x Cooked Meat Jerky \n \t 2x Mejoberries \n \t 3x Fiber \n \t 1x Waterskin", inline=False)
             embed.add_field(name="Dino Taming", value="Morellatops", inline=False)
             await client.send_message(message.channel, embed=embed)
-        elif "" in message.content:
+        elif message.content.endswith(''):
             embed = discord.Embed(title="Unsure which kibble recipe you require well let me help choose from:", description="\u200b \n \t 1. Allosaurus Egg \n \t 2. Ankylo Egg \n \t 3. Araneo Egg \n \t 4. Archaeopteryx Egg \n \t 5. Argentavis Egg \n \t 6. Bronto Egg \n \t 7. Baryonyx Egg \n \t 8. Bronto Egg \n \t 9. Carno Egg \n \t 10. Compy Egg \n \t 11. Dilo Egg \n \t 12. Dimetrodon Egg \n \t 13. Dimorph Egg \n \t 14. Diplo Egg \n \t 15. Dodo Egg \n \t 16. Featherlight Egg \n \t 17. Gallimimus Egg \n \t 18. Glowtail Egg \n \t 19. Ichthyornis Egg \n \t 20. Iguanodon Egg \n \t 21. Kairuku Egg \n \t 22. Kaprosuchus Egg \n \t 23. Kentro Egg \n \t 24. Lystrosaurus Egg \n \t 25. Mantis Egg \n \t 26. Megalania Egg \n \t 27. Megalosaurus Egg \n \t 28. Microraptor Egg \n \t 29. Morellatops Egg \n \t 30. Moschops Egg \n \t 31. Moth Egg \n \t 32. Oviraptor Egg \n \t 33. Pachy Egg \n \t 34. Pachyrhino Egg \n \t 35. Parasaur Egg \n \t 36. Pegomastax Egg \n \t 37. Pelagornis Egg \n \t 38. Pteranodon Egg \n \t 39. Pulmonoscorpious Egg \n \t 40. Quetzal Egg \n \t 41. Raptor Egg \n \t 42. Rock Drake Egg \n \t 43. Sarco Egg \n \t 44. Spino Egg \n \t 45. Stego Egg \n \t 46. Tapejara Egg \n \t 47. Terror Bird Egg \n \t 48. Therizino Egg \n \t 49. Thorny Dragon Egg \n \t 50. Titanoboa Egg \n \t 51. Trike Egg \n \t 52. Troodon Egg \n \t 53. Turtle Egg \n \t 54.Vulture Egg", color=0x00BFFF)
             await client.send_message(message.channel, embed=embed)
-            #await client.send_message(message.channel, "Unsure which kibble recipe you require well let me help choose from: \n \t Kibble Ankylo Egg \n \t Kibble Baryonyx Egg \n \t Kibble Carbonemys Egg \n \t Kibble Dilo Egg \n \t Kibble Dimetrodon Egg \n \t Kibble Dimorph Egg \n \t Kibble Dodo Egg \n \t Kibble Featherlight Egg \n \t Kibble Gallimimus Egg \n \t Kibble Glowtail Egg \n \t Kibble Lystrosaurus Egg \n \t Kibble Mantis Egg \n \t Kibble Morellatops Egg \n \t Kibble Pachy Egg \n \t Kibble Parasaur Egg \n \t Kibble Pteranodon Egg \n \t Kibble Raptor Egg \n \t Kibble Rock Drake Egg \n \t Kibble Spino Egg \n \t Kibble Stego Egg \n \t Kibble Terror Bird Egg \n \t Kibble Thorny Dragon Egg \n \t Kibble Trike Egg \n \t Kibble Vulture Egg")
+#                    await client.send_message(message.channel, "Unsure which kibble recipe you require well let me help choose from: \n \t Kibble Ankylo Egg \n \t Kibble Baryonyx Egg \n \t Kibble Carbonemys Egg \n \t Kibble Dilo Egg \n \t Kibble Dimetrodon Egg \n \t Kibble Dimorph Egg \n \t Kibble Dodo Egg \n \t Kibble Featherlight Egg \n \t Kibble Gallimimus Egg \n \t Kibble Glowtail Egg \n \t Kibble Lystrosaurus Egg \n \t Kibble Mantis Egg \n \t Kibble Morellatops Egg \n \t Kibble Pachy Egg \n \t Kibble Parasaur Egg \n \t Kibble Pteranodon Egg \n \t Kibble Raptor Egg \n \t Kibble Rock Drake Egg \n \t Kibble Spino Egg \n \t Kibble Stego Egg \n \t Kibble Terror Bird Egg \n \t Kibble Thorny Dragon Egg \n \t Kibble Trike Egg \n \t Kibble Vulture Egg")
 
-            
+
 client.run(BotsKey.CB)

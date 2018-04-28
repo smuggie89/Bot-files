@@ -37,7 +37,7 @@ async def getbans(ctx):
 @client.event
 async def on_message(message):
         await client.process_commands(message)
-        if message.content.startswith('!RESTART CHEF'):
+        if message.content.upper().startswith('!RESTART CHEF'):
             os.system('taskkill /f /im py.exe /FI "WINDOWTITLE eq Chef"')
             time.sleep(10)
             subprocess.Popen(['py.exe', 'ChefBot.py'], creationflags = subprocess.CREATE_NEW_CONSOLE)
