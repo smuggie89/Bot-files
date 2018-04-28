@@ -19,15 +19,6 @@ async def on_ready():
 async def wait_until_login():
     await client.change_status(game=discord.Game(name='something goes here'))
 
-@client.command(pass_context=True)
-async def clear(ctx, amount=100):
-        channel = ctx.message.channel
-        messages = []
-        async for message in client.logs_from(channel, limit=int(amount)+1):
-            messages.append(message)
-        await client.delete_messages(messages)
-        await client.say('Messages deleted')
-
 #@client.event
 #async def on_member_role(roles):
 #    User = member
