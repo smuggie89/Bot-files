@@ -10,13 +10,13 @@ client = commands.Bot(command_prefix = "!")
 
 
 @client.command(pass_context=True)
-async def clear(ctx, amount=100):
-        channel = ctx.message.channel
-        messages = []
-        async for message in client.logs_from(channel, limit=int(amount)+1):
-            messages.append(message)
-        await client.delete_messages(messages)
-        await client.say('Messages deleted')
+async def clear(ctx, number):
+    mgs = []
+    number = int(number) #Converting the amount of messages to delete to an integer
+    async for x in client.logs_from(ctx.message.channel, limit = number):
+        mgs.append(x)
+    await client.delete_messages(mgs)
+    #await client.say('Messages deleted')
 
 @client.event
 async def on_ready():
