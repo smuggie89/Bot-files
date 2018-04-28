@@ -35,10 +35,10 @@ async def on_member_join(member):
     channel = client.get_channel("437167787962531852")
     await client.send_message(member, "Welcome %s, to Smuggie's Ark. It's dangerous out there, better not go it alone, we are all here to help you survive! \n If its Dino Stats your after head to the #dino channel and type !help for a list of commands where John can help you. \n If its recipe details you need jump onto the #recipe channel and enter the command !help to find out how Chef can help you. Thanks for joining the Ark." % (User.mention))
     await client.send_message(channel, "Welcome %s, to Smuggie's Ark. It's dangerous out there, better not go it alone, we are all here to help you survive!" % (User.mention))
-#
-#@client.event
-#async def on_message(message):
-#    admin = "438702024918302734" in [role.id for role in message.author.roles]
+
+@client.event
+async def on_message(message):
+    admin = "438702024918302734" in [role.id for role in message.author.roles]
 #    contents = message.content.split(" ")
 #    for word in contents:
 #        if word.upper() in chat_filter:
