@@ -8,9 +8,6 @@ import BotsKey
 Client = discord.Client()
 client = commands.Bot(command_prefix = "!")
 
-@client.event
-async def on_ready():
-    print("Bot is ready")
 
 @client.command(pass_context=True)
 async def clear(ctx, amount=100):
@@ -20,6 +17,10 @@ async def clear(ctx, amount=100):
             messages.append(message)
         await client.delete_messages(messages)
         await client.say('Messages deleted')
+
+@client.event
+async def on_ready():
+    print("Bot is ready")
 
 @client.event
 async def wait_until_login():
