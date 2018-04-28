@@ -11,6 +11,7 @@ from discord.ext import commands
 import asyncio
 import time
 import BotsKey
+import Functions
 
 Client = discord.Client()
 client = commands.Bot(command_prefix = "!")
@@ -31,7 +32,7 @@ async def on_ready():
 @client.event
 async def on_message(message):
     def e_w_k_f(kibblename, kibblenumber):
-        if message.content.upper().endswith(kibblename) or message.content.upper().endswith(kibblenumber):
+        if message.content.upper().endswith(kibblename) or SplitFunction(message.content.upper().equals(kibblenumber):
             return True
 
     def em_k_f(eggname, eggrecipe, eggtaming):
