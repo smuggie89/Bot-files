@@ -1,4 +1,5 @@
 import subprocess
+import os
 import discord
 from discord.ext import commands
 import asyncio
@@ -20,7 +21,7 @@ async def on_ready():
 async def clear(ctx, number):
     mgs = []
     number = int(number) #Converting the amount of messages to delete to an integer
-    async for x in client.logs_from(ctx.message.channel, limit = number+1):
+    async for x in client.logs_from(ctx.message.channel, limit = number):
         mgs.append(x)
     await client.delete_messages(mgs)
     await client.say('Messages deleted')
@@ -31,8 +32,6 @@ async def getbans(ctx):
     x = '\n'.join([y.name for y in x])
     embed = discord.Embed(title = "List of Banned Members", description = x, color = 0xFFFFF)
     return await client.say(embed = embed)
-
-<<<<<<< HEAD
     embed = discord.Embed(description = "**%s** has been kicked!"%member.name, color = 0xFF0000)
     return await client.say(embed = embed)
 
@@ -41,24 +40,20 @@ async def on_message(message):
         if message.content.startswith('!RESTART CHEF'):
             os.system('taskkill /f /im py.exe /FI "WINDOWTITLE eq Chef"')
             time.sleep(10)
-            subprocess.Popen(['py.exe', 'Chef Bot.py'], creationflags = subprocess.CREATE_NEW_CONSOLE)
-        #if message.content.upper().startswith('!RESTART CHEF'):
-        #    os.system('taskkill /f /im py.exe /FI "WINDOWTITLE eq Chef"')
-        #    time.sleep(10)
-        #    os.system('"Chef Bot.py"')
+            subprocess.Popen(['py.exe', 'ChefBot.py'], creationflags = subprocess.CREATE_NEW_CONSOLE)
         if message.content.upper().startswith('!RESTART SURVIVOR'):
             os.system('taskkill /f /im py.exe /FI "WINDOWTITLE eq Survivor"')
             time.sleep(10)
-            os.system('"Survivor Bot.py"')
+            subprocess.Popen(['py.exe', 'SurvivorBot.py'], creationflags = subprocess.CREATE_NEW_CONSOLE)
         if message.content.upper().startswith('!RESTART JOHN'):
             os.system('taskkill /f /im py.exe /FI "WINDOWTITLE eq John"')
             time.sleep(10)
-            os.system('"John Bot.py"')
+            subprocess.Popen(['py.exe', 'JohnBot.py'], creationflags = subprocess.CREATE_NEW_CONSOLE)
         if message.content.upper().startswith('!RESTART SMUG'):
             os.system('taskkill /f /im py.exe /FI "WINDOWTITLE eq Smug"')
             time.sleep(10)
-            os.system('"Smug Test Bot.py"')
-=======
+            subprocess.Popen(['py.exe', 'SmugTestBot.py'], creationflags = subprocess.CREATE_NEW_CONSOLE)
+
 #@client.command(pass_context = True)
 #async def ban(ctx, *, member : discord.Member = None):
 #    if not ctx.message.author.server_permissions.administrator:
@@ -90,25 +85,4 @@ async def on_message(message):
 #
 #    embed = discord.Embed(description = "**%s** has been kicked!"%member.name, color = 0xFF0000)
 #    return await client.say(embed = embed)
-#
-#@client.event
-#async def on_message(message):
-#        if message.content.upper().startswith('!RESTART CHEF'):
-#            os.system('taskkill /f /im py.exe /FI "WINDOWTITLE eq Chef"')
-#            time.sleep(10)
-#            os.system('"Chef Bot.py"')
-#        if message.content.upper().startswith('!RESTART SURVIVOR'):
-#            os.system('taskkill /f /im py.exe /FI "WINDOWTITLE eq Survivor"')
-#            time.sleep(10)
-#            os.system('"Survivor Bot.py"')
-#        if message.content.upper().startswith('!RESTART JOHN'):
-#            os.system('taskkill /f /im py.exe /FI "WINDOWTITLE eq John"')
-#            time.sleep(10)
-#            os.system('"John Bot.py"')
-#        if message.content.upper().startswith('!RESTART SMUG'):
-#            os.system('taskkill /f /im py.exe /FI "WINDOWTITLE eq Smug"')
-#            time.sleep(10)
-##            os.system('"Smug Test Bot.py"')
->>>>>>> 1a73c30afc003ec592d3eb1b15a8e718fe5aef3f
-
 client.run(BotsKey.AB)
