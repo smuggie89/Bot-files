@@ -9,6 +9,13 @@ Client = discord.Client()
 client = commands.Bot(command_prefix = "!")
 
 
+@client.event
+async def on_ready():
+    print("Bot Online!")
+    print("Name: {}".format(client.user.name))
+    print("ID: {}".format(client.user.id))
+    await client.change_presence(game=discord.Game(name='Boss'))
+
 @client.command(pass_context=True)
 async def clear(ctx, number):
     mgs = []
@@ -17,13 +24,38 @@ async def clear(ctx, number):
         mgs.append(x)
     await client.delete_messages(mgs)
     #await client.say('Messages deleted')
+    
+@client.command(pass_context = True)
+async def ban(ctx, *, member : discord.Member = None):
+    if not ctx.message.author.server_permissions.administrator:
+        return
 
-@client.event
-async def on_ready():
-    print("Bot Online!")
-    print("Name: {}".format(client.user.name))
-    print("ID: {}".format(client.user.id))
-    await client.change_presence(game=discord.Game(name='Boss'))
+    if not member:
+        return await client.say(ctx.message.author.mention + "Specify a user to ban!")
+    try:
+        await client.ban(member)
+    except Exception as e:
+        if 'Privilege is too low' in str(e):
+            return await client.say(":x: Privilege too low!")
+
+    embed = discord.Embed(description = "**%s** has been banned!"%member.name, color = 0xFF0000)
+    return await client.say(embed = embed)
+
+@client.command(pass_context = True)
+async def kick(ctx, *, member : discord.Member = None):
+    if not ctx.message.author.server_permissions.administrator:
+        return
+
+    if not member:
+        return await client.say(ctx.message.author.mention + "Specify a user to kick!")
+    try:
+        await client.kick(member)
+    except Exception as e:
+        if 'Privilege is too low' in str(e):
+            return await client.say(":x: Privilege too low!")
+
+    embed = discord.Embed(description = "**%s** has been kicked!"%member.name, color = 0xFF0000)
+    return await client.say(embed = embed)
 
 @client.event
 async def on_message(message):
