@@ -268,6 +268,7 @@ async def on_message(message):
             await client.send_message(message.channel, embed=embed)
         elif message.content.upper().endswith('SPINO EGG') or message.content.upper().endswith('44'):
             embed = discord.Embed(title="Spino Egg", description="This recipe is used to make Kibble (Spino egg)", color=0x00ff00)
+
             embed.add_field(name="Ingredients", value="\u200b \t 1x Spino Egg \n \t 1x Savoroot \n \t 1x Prime Meat Jerky \n \t 2x Mejoberries \n \t 3x Fiber \n \t 1x Waterskin", inline=False)
             embed.add_field(name="Dino Taming", value="Megalodon", inline=False)
             await client.send_message(message.channel, embed=embed)
@@ -326,4 +327,5 @@ async def on_message(message):
             await client.send_message(message.channel, embed=embed)
             #await client.send_message(message.channel, "Unsure which kibble recipe you require well let me help choose from: \n \t Kibble Ankylo Egg \n \t Kibble Baryonyx Egg \n \t Kibble Carbonemys Egg \n \t Kibble Dilo Egg \n \t Kibble Dimetrodon Egg \n \t Kibble Dimorph Egg \n \t Kibble Dodo Egg \n \t Kibble Featherlight Egg \n \t Kibble Gallimimus Egg \n \t Kibble Glowtail Egg \n \t Kibble Lystrosaurus Egg \n \t Kibble Mantis Egg \n \t Kibble Morellatops Egg \n \t Kibble Pachy Egg \n \t Kibble Parasaur Egg \n \t Kibble Pteranodon Egg \n \t Kibble Raptor Egg \n \t Kibble Rock Drake Egg \n \t Kibble Spino Egg \n \t Kibble Stego Egg \n \t Kibble Terror Bird Egg \n \t Kibble Thorny Dragon Egg \n \t Kibble Trike Egg \n \t Kibble Vulture Egg")
 
+            
 client.run(BotsKey.CB)
