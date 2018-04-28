@@ -12,8 +12,12 @@ client = commands.Bot(command_prefix = "!")
 import ctypes
 ctypes.windll.kernel32.SetConsoleTitleW("Smug")
 
+@client.event
 async def on_ready():
-    print("Bot is ready")
+    print("Bot Online!")
+    print("Name: {}".format(client.user.name))
+    print("ID: {}".format(client.user.id))
+    await client.change_presence(game=discord.Game(name='Ark Survival Evolved'))
 
 @client.event
 async def wait_until_login():

@@ -20,11 +20,10 @@ async def clear(ctx, amount=100):
 
 @client.event
 async def on_ready():
-    print("Bot is ready")
-
-@client.event
-async def wait_until_login():
-    await client.change_status(game=discord.Game(name='something goes here'))
+    print("Bot Online!")
+    print("Name: {}".format(client.user.name))
+    print("ID: {}".format(client.user.id))
+    await client.change_presence(game=discord.Game(name='Boss'))
 
 @client.event
 async def on_message(message):

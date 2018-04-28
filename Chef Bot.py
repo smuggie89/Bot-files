@@ -23,7 +23,10 @@ ctypes.windll.kernel32.SetConsoleTitleW("Chef")
 
 @client.event
 async def on_ready():
-    print("Bot is ready")
+    print("Bot Online!")
+    print("Name: {}".format(client.user.name))
+    print("ID: {}".format(client.user.id))
+    await client.change_presence(game=discord.Game(name='With his Chocolate Salty Balls'))
 
 @client.event
 async def on_message(message):
