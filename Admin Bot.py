@@ -24,6 +24,13 @@ async def clear(ctx, number):
         mgs.append(x)
     await client.delete_messages(mgs)
     #await client.say('Messages deleted')
+
+@client.command(pass_context = True)
+async def getbans(ctx):
+    x = await client.get_bans(ctx.message.server)
+    x = '\n'.join([y.name for y in x])
+    embed = discord.Embed(title = "List of Banned Members", description = x, color = 0xFFFFF)
+    return await client.say(embed = embed)
     
 @client.command(pass_context = True)
 async def ban(ctx, *, member : discord.Member = None):
