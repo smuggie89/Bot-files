@@ -1,4 +1,4 @@
-import os
+import subprocess
 import discord
 from discord.ext import commands
 import asyncio
@@ -66,10 +66,14 @@ async def kick(ctx, *, member : discord.Member = None):
 
 @client.event
 async def on_message(message):
-        if message.content.upper().startswith('!RESTART CHEF'):
+        if message.content.startswith('!RESTART CHEF'):
             os.system('taskkill /f /im py.exe /FI "WINDOWTITLE eq Chef"')
             time.sleep(10)
-            os.system('"Chef Bot.py"')
+            subprocess.Popen(['py.exe', 'Chef Bot.py'], creationflags = subprocess.CREATE_NEW_CONSOLE)
+        #if message.content.upper().startswith('!RESTART CHEF'):
+        #    os.system('taskkill /f /im py.exe /FI "WINDOWTITLE eq Chef"')
+        #    time.sleep(10)
+        #    os.system('"Chef Bot.py"')
         if message.content.upper().startswith('!RESTART SURVIVOR'):
             os.system('taskkill /f /im py.exe /FI "WINDOWTITLE eq Survivor"')
             time.sleep(10)
