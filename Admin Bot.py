@@ -3,7 +3,7 @@ import discord
 from discord.ext import commands
 import asyncio
 import time
-import BotToken
+import BotsKey
 
 Client = discord.Client()
 client = commands.Bot(command_prefix = "!")
@@ -35,4 +35,4 @@ async def on_message(message):
             time.sleep(10)
             os.system('"Smug Test Bot.py"')
 
-client.run(BotToken.ABT)
+client.run(BotsKey.ABT)
