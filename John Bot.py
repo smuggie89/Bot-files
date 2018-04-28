@@ -11,7 +11,7 @@ from discord.ext.commands import Bot
 from discord.ext import commands
 import asyncio
 import time
-import BotToken
+import BotsKey
 
 Client = discord.Client()
 client = commands.Bot(command_prefix = "!")
@@ -43,4 +43,4 @@ async def on_message(message):
             async for msg in client.logs_from(message.channel):
                 await client.delete_message(msg)
 
-client.run(BotToken.JBT)
+client.run(BotsKey.JB)

@@ -44,4 +44,4 @@ async def on_message(message):
             time.sleep(10)
             os.system('"Smug Test Bot.py"')
 
-client.run(BotsKey.ABT)
+client.run(BotsKey.AB)

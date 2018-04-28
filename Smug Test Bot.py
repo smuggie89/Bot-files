@@ -4,7 +4,7 @@ from discord.ext.commands import Bot
 from discord.ext import commands
 import asyncio
 import time
-import BotToken
+import BotsKey
 
 Client = discord.Client()
 client = commands.Bot(command_prefix = "!")
@@ -26,4 +26,4 @@ async def wait_until_login():
 #    await client.send_message(member, "Congrats %s, you have been promoted to Admin, this means you have have access to the following restricted commands: \n \t - !admin - Request DM of latest Admin commands (in #general channel only) \n \t - !clear # - Clear messages in channel"" % (User.mention))
 #    await client.send_message(channel, "Congrats %s, you have been promoted to Admin!" % (User.mention))
 
-client.run(BotToken.STBT)
+client.run(BotsKey.STB)
