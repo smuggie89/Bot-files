@@ -32,8 +32,9 @@ async def on_ready():
 @client.event
 async def on_message(message):
     def e_w_k_f(kibblename, kibblenumber):
-        if message.content.upper().endswith(kibblename) or message.content.upper().endswith(kibblenumber):
-            return True
+        #if message.content.upper().endswith(kibblename) or message.content.upper().endswith(kibblenumber):
+         if message.content.upper().endswith(kibblename) or (Functions.SplitFunction(message.content) is kibblenumber):
+             return True
 
     def em_k_f(eggname, eggrecipe, eggtaming):
            embed = discord.Embed(title= (eggname) + " Egg", description="This recipe is used to make Kibble (" + (eggname) + " Egg)", color=0x00ff00)
