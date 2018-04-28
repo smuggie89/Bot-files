@@ -8,7 +8,8 @@ import BotsKey
 
 Client = discord.Client()
 client = commands.Bot(command_prefix = "!")
-#admin = "438702024918302734" in [role.id for role in message.author.roles]
+#admin = discord.Role.id()
+
 import ctypes
 ctypes.windll.kernel32.SetConsoleTitleW("Smug")
 
@@ -25,9 +26,9 @@ async def wait_until_login():
 
 @client.event
 async def on_member_join(member):
-    admin = "438702024918302734" in [client.role.id]
+    #def admin:
     User = member
-    await client.send_message(admin, "Welcome %s, to Smuggie's Ark. It's dangerous out there, better not go it alone, we are all here to help you survive! \n If its Dino Stats your after head to the #dino channel and type !help for a list of commands where John can help you. \n If its recipe details you need jump onto the #recipe channel and enter the command !help to find out how Chef can help you. Thanks for joining the Ark." % (User.mention))
+    await client.send_message((discord.Role('438702024918302734')), "Welcome %s, to Smuggie's Ark. It's dangerous out there, better not go it alone, we are all here to help you survive! \n If its Dino Stats your after head to the #dino channel and type !help for a list of commands where John can help you. \n If its recipe details you need jump onto the #recipe channel and enter the command !help to find out how Chef can help you. Thanks for joining the Ark." % (User.mention))
 
 #@client.event
 #async def on_member_role(roles):

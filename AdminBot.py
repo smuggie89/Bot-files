@@ -8,6 +8,7 @@ import BotsKey
 
 Client = discord.Client()
 client = commands.Bot(command_prefix = "!")
+#admin = "438702024918302734" in [role.id for role in client.server.roles]
 
 @client.event
 async def on_ready():
@@ -34,9 +35,20 @@ async def getbans(ctx):
     embed = discord.Embed(description = "**%s** has been kicked!"%member.name, color = 0xFF0000)
     return await client.say(embed = embed)
 
+
 @client.event
 async def on_message(message):
+        if message.content.upper().startswith('!ADMIN'):
+            #if admin == True:
+            member = message.author
+            User = message.author
+            await client.send_message(member, "As requested %s, the admin codes you require: \n \t - !admin - Request DM of latest Admin commands (in #general channel only) \n \t - !clear # - Clear messages in channel" % (User.mention))
+        else:
+            await client.send_message(message.channel, "You are not authorised to do that")
         await client.process_commands(message)
+
+@client.event
+async def on_message(message):
         if message.content.upper().startswith('!RESTART CHEF'):
             os.system('taskkill /f /im py.exe /FI "WINDOWTITLE eq Chef"')
             time.sleep(10)
@@ -53,18 +65,7 @@ async def on_message(message):
             os.system('taskkill /f /im py.exe /FI "WINDOWTITLE eq Smug"')
             time.sleep(10)
             subprocess.Popen(['py.exe', 'SmugTestBot.py'], creationflags = subprocess.CREATE_NEW_CONSOLE)
-
-#@client.event
-#async def on_message(message):
-#        admin = "438702024918302734" in [role.id for role in message.author.roles]
-#        await client.process_commands(message)
-#        if message.content.upper().startswith('!ADMIN'):
-#            if admin == True:
-#                member = message.author
-#                User = message.author
-#                await client.send_message(member, "As requested %s, the admin codes you require: \n \t - !admin - Request DM of latest Admin commands (in #general channel only) \n \t - !clear # - Clear messages in channel" % (User.mention))
-#            else:
-#                await client.send_message(message.channel, "You are not authorised to do that")
+        await client.process_commands(message)
 
 #@client.command(pass_context = True)
 #async def ban(ctx, *, member : discord.Member = None):
