@@ -54,6 +54,14 @@ async def on_message(message):
             time.sleep(10)
             subprocess.Popen(['py.exe', 'SmugTestBot.py'], creationflags = subprocess.CREATE_NEW_CONSOLE)
 
+    if message.content.upper().startswith('!ADMIN'):
+        if admin == True:
+            member = message.author
+            User = message.author
+            await client.send_message(member, "As requested %s, the admin codes you require: \n \t - !admin - Request DM of latest Admin commands (in #general channel only) \n \t - !clear # - Clear messages in channel" % (User.mention))
+        else:
+            await client.send_message(message.channel, "You are not authorised to do that")
+
 #@client.command(pass_context = True)
 #async def ban(ctx, *, member : discord.Member = None):
 #    if not ctx.message.author.server_permissions.administrator:
