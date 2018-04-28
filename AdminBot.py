@@ -55,6 +55,7 @@ async def on_message(message):
             subprocess.Popen(['py.exe', 'SmugTestBot.py'], creationflags = subprocess.CREATE_NEW_CONSOLE)
 @client.event
 async def on_message(message):
+        admin = "438702024918302734" in [role.id for role in message.author.roles]
         await client.process_commands(message)
         if message.content.upper().startswith('!ADMIN'):
             if admin == True:
