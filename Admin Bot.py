@@ -20,7 +20,7 @@ async def on_ready():
 async def clear(ctx, number):
     mgs = []
     number = int(number) #Converting the amount of messages to delete to an integer
-    async for x in client.logs_from(ctx.message.channel, limit = number):
+    async for x in client.logs_from(ctx.message.channel, limit = number+1):
         mgs.append(x)
     await client.delete_messages(mgs)
     await client.say('Messages deleted')
