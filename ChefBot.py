@@ -99,71 +99,32 @@ async def on_message(message):
             await client.send_message(message.channel, embed=em_k_f("Carno", "\u200b \t 1x Carno Egg \n \t 1x Savoroot \n \t 1x Cooked Meat \n \t 2x Mejoberries \n \t 3x Fiber \n \t 1x Waterskin", "Trike, Direwolf, Direbear"))
         elif e_w_k_f('COMPY EGG', '9'):
             await client.send_message(message.channel, embed=em_k_f("Compy", "\u200b \t 1x Compy Egg \n \t 1x Citronal \n \t 1x Cooked Fish Meat \n \t 2x Mejoberries \n \t 3x Fiber \n \t 1x Waterskin", "Kentrosaurus"))
-        elif message.content.upper().endswith('DILO EGG') or message.content.upper().endswith('10'):
-            embed = discord.Embed(title="Dilo Egg", description="This recipe is used to make Kibble (Dilo egg)", color=0x00ff00)
-            embed.add_field(name="Ingredients", value="\u200b \t 1x Dilo Egg \n \t 1x Citronal \n \t 1x Cooked Meat Jerky \n \t 2x Mejoberries \n \t 3x Fiber \n \t 1x Waterskin", inline=False)
-            embed.add_field(name="Dino Taming", value="Ankylo, Doedicurus, Pachy", inline=False)
-            await client.send_message(message.channel, embed=embed)
-        elif message.content.upper().endswith('DIMETRODON EGG') or message.content.upper().endswith('11'):
-            embed = discord.Embed(title="Dimetrodon Egg", description="This recipe is used to make Kibble (Dimetrodon egg)", color=0x00ff00)
-            embed.add_field(name="Ingredients", value="\u200b \t 1x Dimetrodon Egg \n \t 1x Citronal \n \t 1x Cooked Meat Jerky \n \t 2x Mejoberries \n \t 3x Fiber \n \t 1x Waterskin", inline=False)
-            embed.add_field(name="Dino Taming", value="Gallimimus", inline=False)
-            await client.send_message(message.channel, embed=embed)
-        elif message.content.upper().endswith('DIMORPH EGG') or message.content.upper().endswith('12'):
-            embed = discord.Embed(title="Dimorph Egg", description="This recipe is used to make Kibble (Dimorph egg)", color=0x00ff00)
-            embed.add_field(name="Ingredients", value="\u200b \t 1x Dimorph Egg \n \t 1x Longrass \n \t 1x Cooked Meat or Jerky \n \t 2x Mejoberries \n \t 3x Fiber \n \t 1x Waterskin", inline=False)
-            embed.add_field(name="Dino Taming", value="Megaloceros", inline=False)
-            await client.send_message(message.channel, embed=embed)
-        elif message.content.upper().endswith('DIPLO EGG') or message.content.upper().endswith('13'):
-            embed = discord.Embed(title="Diplo Egg", description="This recipe is used to make Kibble (Diplo Egg)", color=0x00ff00)
-            embed.add_field(name="Ingredients", value="\u200b \t 1x Diplo Egg \n \t 1x Savoroot \n \t 1x Rare Flower \n \t 2x Mejoberries \n \t 3x Fiber \n \t 1x Waterskin", inline=False)
-            embed.add_field(name="Dino Taming", value="Allosaurus", inline=False)
-            await client.send_message(message.channel, embed=embed)
-        elif message.content.upper().endswith('DODO EGG') or message.content.upper().endswith('14'):
-            embed = discord.Embed(title="Dodo Egg", description="This recipee is used to make Kibble (Dodo egg)", color=0x00ff00)
-            embed.add_field(name="Ingredients", value="\u200b \t 1x Dodo Egg \n \t 1x Rockarrot \n \t 1x Cooked Meat or Cooked Fish Meat \n \t 2x Mejoberries \n \t 3x Fiber \n \t 1x Waterskin", inline=False)
-            embed.add_field(name="Dino Taming", value="Pteranodon, Ichthy, Mesopithecus", inline=False)
-            await client.send_message(message.channel, embed=embed)
-        elif message.content.upper().endswith('FEATHERLIGHT EGG') or message.content.upper().endswith('15'):
-            embed = discord.Embed(title="FeatherLight Egg", description="This recipee is used to make Kibble (Featherlight egg)", color=0x00ff00)
-            embed.add_field(name="Ingredients", value="\u200b \t 1x Featherlight Egg \n \t 3x Auric Mushroom \n \t 1x Prime Meat Jerky \n \t 2x Mejoberries \n \t 3x Fiber \n \t 1x Waterskin", inline=False)
-            embed.add_field(name="Dino Taming", value="\u200b", inline=False)
-            await client.send_message(message.channel, embed=embed)
-        elif message.content.upper().endswith('GALLIMIMUS EGG') or message.content.upper().endswith('16'):
-            embed = discord.Embed(title="Gallimimus Egg", description="This recipe is used to make Kibble (Gallimimus egg)", color=0x00ff00)
-            embed.add_field(name="Ingredients", value="\u200b \t 1x Gallimimus Egg \n \t 1x Savoroot \n \t 1x Cooked Meat Jerky \n \t 2x Mejoberries \n \t 3x Fiber \n \t 1x Waterskin", inline=False)
-            embed.add_field(name="Dino Taming", value="Terror Bird, Castoroides", inline=False)
-            await client.send_message(message.channel, embed=embed)
-        elif message.content.upper().endswith('GLOWTAIL EGG') or message.content.upper().endswith('17'):
-            embed = discord.Embed(title="Glowtail Egg", description="This recipe is used to make Kibble (Glowtail egg)", color=0x00ff00)
-            embed.add_field(name="Ingredients", value="\u200b \t 1x Glowtail Egg \n \t 3x Aquatic Mushroom \n \t 1x Cooked Fish Meat \n \t 2x Mejoberries \n \t 3x Fiber \n \t 1x Waterskin", inline=False)
-            embed.add_field(name="Dino Taming", value="\u200b", inline=False)
-            await client.send_message(message.channel, embed=embed)
-        elif message.content.upper().endswith('ICHTHYORNIS EGG') or message.content.upper().endswith('18'):
-            embed = discord.Embed(title="Ichthyornis Egg", description="This recipe is used to make Kibble (Ichthyornis Egg)", color=0x00ff00)
-            embed.add_field(name="Ingredients", value="\u200b \t 1x Ichthyornis Egg \n \t 1x Savoroot \n \t 1x Rare Flower \n \t 2x Mejoberries \n \t 3x Fiber \n \t 1x Waterskin", inline=False)
-            embed.add_field(name="Dino Taming", value="Giant Bee", inline=False)
-            await client.send_message(message.channel, embed=embed)
-        elif message.content.upper().endswith('IGUANODON EGG') or message.content.upper().endswith('19'):
-            embed = discord.Embed(title="Iguanodon Egg", description="This recipe is used to make Kibble (Iguanodon Egg)", color=0x00ff00)
-            embed.add_field(name="Ingredients", value="\u200b \t 1x Iguanodon Egg \n \t 1x Rare Mushroom \n \t 1x Prime Meat Jerky \n \t 2x Mejoberries \n \t 3x Fiber \n \t 1x Waterskin", inline=False)
-            embed.add_field(name="Dino Taming", value="Daeodon", inline=False)
-            await client.send_message(message.channel, embed=embed)
-        elif message.content.upper().endswith('KAIRUKU EGG') or message.content.upper().endswith('20'):
-            embed = discord.Embed(title="Kairuku Egg", description="This recipe is used to make Kibble (Kairuku Egg)", color=0x00ff00)
-            embed.add_field(name="Ingredients", value="\u200b \t 1x Kairuku Egg \n \t 1x Savoroot \n \t 1x Cooked Meat or Jerky \n \t 2x Mejoberries \n \t 3x Fiber \n \t 1x Waterskin", inline=False)
-            embed.add_field(name="Dino Taming", value="Angler", inline=False)
-            await client.send_message(message.channel, embed=embed)
-        elif message.content.upper().endswith('KAPROSUCHUS EGG') or message.content.upper().endswith('21'):
-            embed = discord.Embed(title="Kaprosuchus Egg", description="This recipe is used to make Kibble (Kaprosuchus Egg)", color=0x00ff00)
-            embed.add_field(name="Ingredients", value="\u200b \t 1x Kaprosuchus Egg \n \t 1x Savoroot \n \t 1x Prime Meat Jerky \n \t 2x Mejoberries \n \t 3x Fiber \n \t 1x Waterskin", inline=False)
-            embed.add_field(name="Dino Taming", value="\u200b", inline=False)
-            await client.send_message(message.channel, embed=embed)
-        elif message.content.upper().endswith('KENTRO EGG') or message.content.upper().endswith('22'):
-            embed = discord.Embed(title="Kentro Egg", description="This recipe is used to make Kibble (Kentro Egg)", color=0x00ff00)
-            embed.add_field(name="Ingredients", value="\u200b \t 1x Kentro Egg \n \t 1x Amonite Bile \n \t 1x Golden Hesperornis Egg \n \t 2x Mejoberries \n \t 3x Fiber \n \t 1x Waterskin", inline=False)
-            embed.add_field(name="Dino Taming", value="Yutyrannus", inline=False)
-            await client.send_message(message.channel, embed=embed)
+        elif e_w_k_f('DILO EGG', '10'):
+            await client.send_message(message.channel, embed=em_k_f("Dilo", "\u200b \t 1x Dilo Egg \n \t 1x Citronal \n \t 1x Cooked Meat Jerky \n \t 2x Mejoberries \n \t 3x Fiber \n \t 1x Waterskin", "Ankylo, Doedicurus, Pachy"))
+        elif e_w_k_f('DIMETRODON EGG', "11"):
+            await client.send_message(message.channel, embed=em_k_f("Dimetrodon", "\u200b \t 1x Dimetrodon Egg \n \t 1x Citronal \n \t 1x Cooked Meat Jerky \n \t 2x Mejoberries \n \t 3x Fiber \n \t 1x Waterskin", "Gallimimus"))
+        elif e_w_k_f('DIMORPH EGG', "12"):
+            await client.send_message(message.channel, embed=em_k_f("Dimorph", "\u200b \t 1x Dimorph Egg \n \t 1x Longrass \n \t 1x Cooked Meat or Jerky \n \t 2x Mejoberries \n \t 3x Fiber \n \t 1x Waterskin", "Megaloceros"))
+        elif e_w_k_f('DIPLO EGG', '13'):
+            await client.send_message(message.channel, embed=em_k_f("Diplo", "\u200b \t 1x Diplo Egg \n \t 1x Savoroot \n \t 1x Rare Flower \n \t 2x Mejoberries \n \t 3x Fiber \n \t 1x Waterskin", "Allosaurus"))
+        elif e_w_k_f('DODO EGG', '14'):
+            await client.send_message(message.channel, embed=em_k_f("Dodo", "\u200b \t 1x Dodo Egg \n \t 1x Rockarrot \n \t 1x Cooked Meat or Cooked Fish Meat \n \t 2x Mejoberries \n \t 3x Fiber \n \t 1x Waterskin", "Pteranodon, Ichthy, Mesopithecus"))
+        elif e_w_k_f('FEATHERLIGHT EGG', '15'):
+            await client.send_message(message.channel, embed=em_k_f("Featherlight", "\u200b \t 1x Featherlight Egg \n \t 3x Auric Mushroom \n \t 1x Prime Meat Jerky \n \t 2x Mejoberries \n \t 3x Fiber \n \t 1x Waterskin", "\u200b"))
+        elif e_w_k_f('GALLIMIMUS EGG', '16'):
+            await client.send_message(message.channel, embed=em_k_f("Gallimimus", "\u200b \t 1x Gallimimus Egg \n \t 1x Savoroot \n \t 1x Cooked Meat Jerky \n \t 2x Mejoberries \n \t 3x Fiber \n \t 1x Waterskin", "Terror Bird, Castoroides"))
+        elif e_w_k_f('GLOWTAIL EGG', '17'):
+            await client.send_message(message.channel, embed=em_k_f("Glowtail", "\u200b \t 1x Glowtail Egg \n \t 3x Aquatic Mushroom \n \t 1x Cooked Fish Meat \n \t 2x Mejoberries \n \t 3x Fiber \n \t 1x Waterskin", "\u200b"))
+        elif e_w_k_f('ICHTHYORNIS EGG', '18'):
+            await client.send_message(message.channel, embed=em_k_f("Ichthyornis", "\u200b \t 1x Ichthyornis Egg \n \t 1x Savoroot \n \t 1x Rare Flower \n \t 2x Mejoberries \n \t 3x Fiber \n \t 1x Waterskin", "Giant Bee"))
+        elif e_w_k_f('IGUANODON EGG', '19'):
+            await client.send_message(message.channel, embed=em_k_f("Iguanodon", "\u200b \t 1x Iguanodon Egg \n \t 1x Rare Mushroom \n \t 1x Prime Meat Jerky \n \t 2x Mejoberries \n \t 3x Fiber \n \t 1x Waterskin","Daeodon"))
+        elif e_w_k_f('KAIRUKU EGG', '20'):
+            await client.send_message(message.channel, embed=em_k_f("Kairuku", "\u200b \t 1x Kairuku Egg \n \t 1x Savoroot \n \t 1x Cooked Meat or Jerky \n \t 2x Mejoberries \n \t 3x Fiber \n \t 1x Waterskin", "Angler"))
+        elif e_w_k_f('KAPROSUCHUS EGG', '21'):
+            await client.send_message(message.channel, embed=em_k_f("Kaprosuchus", "\u200b \t 1x Kaprosuchus Egg \n \t 1x Savoroot \n \t 1x Prime Meat Jerky \n \t 2x Mejoberries \n \t 3x Fiber \n \t 1x Waterskin", "\u200b"))
+        elif e_w_k_f('KENTRO EGG', '22'):
+            await client.send_message(message.channel, embed=em_k_f("Kentro", "\u200b \t 1x Kentro Egg \n \t 1x Amonite Bile \n \t 1x Golden Hesperornis Egg \n \t 2x Mejoberries \n \t 3x Fiber \n \t 1x Waterskin", "Yutyrannus"))
         elif message.content.upper().endswith('LYSTROSAURUS EGG') or message.content.upper().endswith('23'):
             embed = discord.Embed(title="Lystrosaurus Egg", description="This recipe is used to make Kibble (Lystrosaurus egg)", color=0x00ff00)
             embed.add_field(name="Ingredients", value="\u200b \t 1x Lystrosaurus Egg \n \t 1x Rockarrot \n \t 1x Cooked Prime Meat or Prime Jerky \n \t 2x Mejoberries \n \t 3x Fiber \n \t 1x Waterskin", inline=False)
