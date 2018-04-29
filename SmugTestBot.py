@@ -24,19 +24,19 @@ async def on_ready():
 async def wait_until_login():
     await client.change_status(game=discord.Game(name='something goes here'))
 
-#@client.event
-#async def on_member_join(member):
-#    for server in client.servers:
-#        for role in server.roles:
-#            if roles.name == 'Admin':
-#                User = member
-#                await client.send_message(role, " %s has joined Smuggie's Ark" % (User.mention))
-
 @client.event
-async def on_member_role_update(before,after):
-        User = member
-        channel = client.get_channel("437167787962531852")
-        await client.send_message(member, "Congrats %s, you have been promoted to Admin, this means you have have access to the following restricted commands: \n \t - !admin - Request DM of latest Admin commands (in #general channel only) \n \t - !clear # - Clear messages in channel" % (User.mention))
-        await client.send_message(channel, "Congrats %s, you have been promoted to Admin!" % (User.mention))
+async def on_member_join(member):
+    User = member
+    server = member.server
+    for user in server.members:
+        if user.server_permissions.administrator:
+            await client.send_message(user, "%s has joined the Ark" % (User.mention))
+
+#@client.event
+#async def on_member_role_update(before,after):
+#        User = member
+#        channel = client.get_channel("437167787962531852")
+#        await client.send_message(member, "Congrats %s, you have been promoted to Admin, this means you have have access to the following restricted commands: \n \t - !admin - Request DM of latest Admin commands (in #general channel only) \n \t - !clear # - Clear messages in channel" % (User.mention))
+#        await client.send_message(channel, "Congrats %s, you have been promoted to Admin!" % (User.mention))
 
 client.run(BotsKey.STB)

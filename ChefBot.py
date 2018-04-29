@@ -32,7 +32,7 @@ async def on_ready():
 @client.event
 async def on_message(message):
     def e_w_k_f(kibblename, kibblenumber):
-         if message.content.upper().endswith(kibblename) or (Functions.SplitFunction(message.content) is kibblenumber):
+         if message.content.upper().endswith(kibblename) or (Functions.SplitFunction(message.content) is (kibblenumber)):
              return True
 
     def em_k_f(eggname, eggrecipe, eggtaming):
@@ -276,7 +276,7 @@ async def on_message(message):
             embed.add_field(name="Ingredients", value="\u200b \t 1x Vulture Egg \n \t 1x Longrass \n \t 1x Cooked Meat Jerky \n \t 2x Mejoberries \n \t 3x Fiber \n \t 1x Waterskin", inline=False)
             embed.add_field(name="Dino Taming", value="Morellatops", inline=False)
             await client.send_message(message.channel, embed=embed)
-        elif message.content.endswith(''):
+        elif message.content.endswith(""):
             embed = discord.Embed(title="Unsure which kibble recipe you require well let me help choose from:", description="\u200b \n \t 1. Allosaurus Egg \n \t 2. Ankylo Egg \n \t 3. Araneo Egg \n \t 4. Archaeopteryx Egg \n \t 5. Argentavis Egg \n \t 6. Baryonyx Egg \n \t 7. Bronto Egg \n \t 8. Carno Egg \n \t 9. Compy Egg \n \t 10. Dilo Egg \n \t 11. Dimetrodon Egg \n \t 12. Dimorph Egg \n \t 13. Diplo Egg \n \t 14. Dodo Egg \n \t 15. Featherlight Egg \n \t 16. Gallimimus Egg \n \t 17. Glowtail Egg \n \t 18. Ichthyornis Egg \n \t 19. Iguanodon Egg \n \t 20. Kairuku Egg \n \t 21. Kaprosuchus Egg \n \t 22. Kentro Egg \n \t 23. Lystrosaurus Egg \n \t 24. Mantis Egg \n \t 25. Megalania Egg \n \t 26. Megalosaurus Egg \n \t 27. Microraptor Egg \n \t 28. Morellatops Egg \n \t 29. Moschops Egg \n \t 30. Moth Egg \n \t 31. Oviraptor Egg \n \t 32. Pachy Egg \n \t 33. Pachyrhino Egg \n \t 34. Parasaur Egg \n \t 35. Pegomastax Egg \n \t 36. Pelagornis Egg \n \t 37. Pteranodon Egg \n \t 38. Pulmonoscorpious Egg \n \t 39. Quetzal Egg \n \t 40. Raptor Egg \n \t 41. Rock Drake Egg \n \t 42. Sarco Egg \n \t 43. Spino Egg \n \t 44. Stego Egg \n \t 45. Tapejara Egg \n \t 46. Terror Bird Egg \n \t 47. Therizino Egg \n \t 48. Thorny Dragon Egg \n \t 49. Titanoboa Egg \n \t 50. Trike Egg \n \t 51. Troodon Egg \n \t 52. Turtle Egg \n \t 53.Vulture Egg", color=0x00BFFF)
             await client.send_message(message.channel, embed=embed)
 

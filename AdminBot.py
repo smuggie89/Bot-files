@@ -35,6 +35,13 @@ async def getbans(ctx):
     embed = discord.Embed(description = "**%s** has been kicked!"%member.name, color = 0xFF0000)
     return await client.say(embed = embed)
 
+@client.event
+async def on_member_join(member):
+    server = member.server
+    for user in server.members:
+        if user.server_permissions.administrator:
+            await client.send_message(user, "A new member has joined")
+    await client.process_commands(message)
 
 @client.event
 async def on_message(message):
