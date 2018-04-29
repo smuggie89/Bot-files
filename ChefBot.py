@@ -125,21 +125,12 @@ async def on_message(message):
             await client.send_message(message.channel, embed=em_k_f("Kaprosuchus", "\u200b \t 1x Kaprosuchus Egg \n \t 1x Savoroot \n \t 1x Prime Meat Jerky \n \t 2x Mejoberries \n \t 3x Fiber \n \t 1x Waterskin", "\u200b"))
         elif e_w_k_f('KENTRO EGG', '22'):
             await client.send_message(message.channel, embed=em_k_f("Kentro", "\u200b \t 1x Kentro Egg \n \t 1x Amonite Bile \n \t 1x Golden Hesperornis Egg \n \t 2x Mejoberries \n \t 3x Fiber \n \t 1x Waterskin", "Yutyrannus"))
-        elif message.content.upper().endswith('LYSTROSAURUS EGG') or message.content.upper().endswith('23'):
-            embed = discord.Embed(title="Lystrosaurus Egg", description="This recipe is used to make Kibble (Lystrosaurus egg)", color=0x00ff00)
-            embed.add_field(name="Ingredients", value="\u200b \t 1x Lystrosaurus Egg \n \t 1x Rockarrot \n \t 1x Cooked Prime Meat or Prime Jerky \n \t 2x Mejoberries \n \t 3x Fiber \n \t 1x Waterskin", inline=False)
-            embed.add_field(name="Dino Taming", value="Diplodocus", inline=False)
-            await client.send_message(message.channel, embed=embed)
-        elif message.content.upper().endswith('MANTIS EGG') or message.content.upper().endswith('24'):
-            embed = discord.Embed(title="Mantis Egg", description="This recipe is used to make Kibble (Mantis egg)", color=0x00ff00)
-            embed.add_field(name="Ingredients", value="\u200b \t 1x Mantis Egg \n \t 1x Citronal \n \t 1x Obsidian \n \t 2x Mejoberries \n \t 3x Fiber \n \t 1x Waterskin", inline=False)
-            embed.add_field(name="Dino Taming", value="Rock Elemental", inline=False)
-            await client.send_message(message.channel, embed=embed)
-        elif message.content.upper().endswith('MEGALANIA EGG') or message.content.upper().endswith('25'):
-            embed = discord.Embed(title="Megalania Egg", description="This recipe is used to make Kibble (Megalania Egg)", color=0x00ff00)
-            embed.add_field(name="Ingredients", value="\u200b \t 1x Megalania Egg \n \t 1x Giant Bee Honey \n \t 10x Chitin \n \t 2x Mejoberries \n \t 3x Fiber \n \t 1x Waterskin", inline=False)
-            embed.add_field(name="Dino Taming", value="Megatherium", inline=False)
-            await client.send_message(message.channel, embed=embed)
+        elif e_w_k_f('LYSTROSAURUS EGG', '23'):
+            await client.send_message(message.channel, embed=em_k_f("Lystrosaurus", "\u200b \t 1x Lystrosaurus Egg \n \t 1x Rockarrot \n \t 1x Cooked Prime Meat or Prime Jerky \n \t 2x Mejoberries \n \t 3x Fiber \n \t 1x Waterskin", "Diplodocus"))
+        elif e_w_k_f('MANTIS EGG', '24'):
+            await client.send_message(message.channel, embed=em_k_f("Mantis", "\u200b \t 1x Mantis Egg \n \t 1x Citronal \n \t 1x Obsidian \n \t 2x Mejoberries \n \t 3x Fiber \n \t 1x Waterskin", "Rock Elemental"))
+        elif e_w_k_f('MEGALANIA EGG', '25'):
+            await client.send_message(message.channel, embed=em_k_f("Megalania", "\u200b \t 1x Megalania Egg \n \t 1x Giant Bee Honey \n \t 10x Chitin \n \t 2x Mejoberries \n \t 3x Fiber \n \t 1x Waterskin", "Megatherium"))
         elif message.content.upper().endswith('MEGALOSAURUS EGG') or message.content.upper().endswith('26'):
             embed = discord.Embed(title="Megalosaurus Egg", description="This recipe is used to make Kibble (Megalosaurus Egg)", color=0x00ff00)
             embed.add_field(name="Ingredients", value="\u200b \t 1x Megalosaurus Egg \n \t 1x Rockarrot \n \t 2x Prime Meat Jerky \n \t 2x Mejoberries \n \t 3x Fiber \n \t 1x Waterskin", inline=False)
