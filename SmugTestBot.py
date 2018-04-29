@@ -10,6 +10,10 @@ Client = discord.Client()
 client = commands.Bot(command_prefix = "!")
 #admin = discord.Role.id()
 
+class Admin:
+    def discord.Rolei_d(438702024918302734):
+     return
+
 import ctypes
 ctypes.windll.kernel32.SetConsoleTitleW("Smug")
 
@@ -28,7 +32,7 @@ async def wait_until_login():
 async def on_member_join(member):
     #def admin:
     User = member
-    await client.send_message((discord.Role('438702024918302734')), "Welcome %s, to Smuggie's Ark. It's dangerous out there, better not go it alone, we are all here to help you survive! \n If its Dino Stats your after head to the #dino channel and type !help for a list of commands where John can help you. \n If its recipe details you need jump onto the #recipe channel and enter the command !help to find out how Chef can help you. Thanks for joining the Ark." % (User.mention))
+    await client.send_message("Welcome %s, to Smuggie's Ark. It's dangerous out there, better not go it alone, we are all here to help you survive! \n If its Dino Stats your after head to the #dino channel and type !help for a list of commands where John can help you. \n If its recipe details you need jump onto the #recipe channel and enter the command !help to find out how Chef can help you. Thanks for joining the Ark." % (User.mention))
 
 #@client.event
 #async def on_member_role(roles):
