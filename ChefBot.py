@@ -71,13 +71,16 @@ async def on_message(message):
             await client.send_message(message.channel, "You are not an admin")
 #Help
     if message.content.upper().startswith('!HELP'):
-            embed = discord.Embed(title="Commands for #recipe channel", description="Ah, so i see you need some help! Let me provide you with some queastions you can ask", color=0x27408B)
-            embed.add_field(name="\u200b \t !kibble", value="\u200b \t gives you a list of all available kibble recipes", inline=False)
-            embed.add_field(name="\u200b \t !kibble <kibble name>", value="\u200b \t provides recipe and details of sepcified kibble", inline=False)
-            embed.add_field(name="\u200b \t !food", value="\u200b \t gives a list of all available food recipes", inline=False)
-            embed.add_field(name="\u200b \t !food <food name>", value="\u200b \t provides details of specified food", inline=False)
-            #embed.add_field(name=" ", value="\t !kibble - gives you a list of all available kibble recipes \n \t !kibble <kibble name> - provides recipe and details of sepcified kibble \n \t !food - gives a list of all available food recipes \n \t !food <food name> - provides details of specified food", inline=False)
-            await client.send_message(message.channel, embed=embed)
+         for server in client.servers:
+             for channel in server.channels:
+                 if channel.name == 'recipes':
+                    embed = discord.Embed(title="Commands for #recipe channel", description="Ah, so i see you need some help! Let me provide you with some queastions you can ask", color=0x27408B)
+                    embed.add_field(name="\u200b \t !kibble", value="\u200b \t gives you a list of all available kibble recipes", inline=False)
+                    embed.add_field(name="\u200b \t !kibble <kibble name>", value="\u200b \t provides recipe and details of sepcified kibble", inline=False)
+                    embed.add_field(name="\u200b \t !food", value="\u200b \t gives a list of all available food recipes", inline=False)
+                    embed.add_field(name="\u200b \t !food <food name>", value="\u200b \t provides details of specified food", inline=False)
+                    #embed.add_field(name=" ", value="\t !kibble - gives you a list of all available kibble recipes \n \t !kibble <kibble name> - provides recipe and details of sepcified kibble \n \t !food - gives a list of all available food recipes \n \t !food <food name> - provides details of specified food", inline=False)
+                    await client.send_message(channel, embed=embed)
 #Kibble Recipes
     if message.content.upper().startswith('!KIBBLE'):
         if e_w_k_f('ALLOSAURUS EGG', '1'):

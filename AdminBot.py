@@ -47,6 +47,19 @@ async def on_message(message):
             await client.send_message(message.channel, "You are not authorised to do that")
         await client.process_commands(message)
 
+#Help
+@client.event
+async def on_message(message):
+    if message.content.upper().startswith('!HELP'):
+         for server in client.servers:
+             for channel in server.channels:
+                 if channel.name == 'general':
+                    if "438702024918302734" in [role.id for role in message.author.roles]:
+                        embed = discord.Embed(title="Commands", description="Ah, so i see you need some help! Let me provide you with some queastions you can ask", color=0x27408B)
+                        embed.add_field(name="\u200b \t !getbans", value="\u200b \t gives you a list of banned players", inline=False)
+                        await client.send_message(message.author, embed=embed)
+    await client.process_commands(message)
+
 @client.event
 async def on_message(message):
         if message.content.upper().startswith('!RESTART CHEF'):
