@@ -78,8 +78,8 @@ async def on_message(message):
             for user in server.members:
                 if user.server_permissions.administrator:
                     await client.send_message(member, "As requested %s, the admin codes you require: \n \t - !admin - Request DM of latest Admin commands (in #general channel only) \n \t - !clear # - Clear messages in channel" % (User.mention))
-            else:
-                await client.send_message(message.channel, "You are not authorised to do that")
+                else:
+                    await client.send_message(message.channel, "You are not authorised to do that")
         await client.process_commands(message)
 
 #@client.command(pass_context = True)
