@@ -173,11 +173,8 @@ async def on_message(message):
             await client.send_message(message.channel, embed=em_k_f("Stego", "\u200b \t 1x Stego Egg \n \t 1x Citronal \n \t 1x Prime Meat Jerky \n \t 2x Mejoberries \n \t 3x Fiber \n \t 1x Waterskin", "Argentavis"))
         elif e_w_k_f('TAPEJARA EGG', '46'):
             await client.send_message(message.channel, embed=em_k_f("Tapejara", "\u200b \t 1x Tapejara Egg \n \t 1x Rockarrot \n \t 1x Cooked Prime Meat \n \t 2x Mejoberries \n \t 3x Fiber \n \t 1x Waterskin", "Kaprosuchus"))
-        elif message.content.upper().endswith('TERROR BIRD EGG') or message.content.upper().endswith('47'):
-            embed = discord.Embed(title="Terror Bird Egg", description="This recipe is used to make Kibble (Terror Bird egg)", color=0x00ff00)
-            embed.add_field(name="Ingredients", value="\u200b \t 1x Terror Bird Egg \n \t 1x Citronal \n \t 1x Cooked Meat or Jerky \n \t 2x Mejoberries \n \t 3x Fiber \n \t 1x Waterskin", inline=False)
-            embed.add_field(name="Dino Taming", value="hi2", inline=False)
-            await client.send_message(message.channel, embed=embed)
+        elif e_w_k_f('TERROR BIRD EGG', '47'):
+            await client.send_message(message.channel, embed=em_k_f("Terror Bird", "\u200b \t 1x Terror Bird Egg \n \t 1x Citronal \n \t 1x Cooked Meat or Jerky \n \t 2x Mejoberries \n \t 3x Fiber \n \t 1x Waterskin", "Woolly Rhino"))
         elif message.content.upper().endswith('THERIZINO EGG') or message.content.upper().endswith('48'):
             embed = discord.Embed(title="Therizino Egg", description="This recipe is used to make Kibble (Therizino Egg)", color=0x00ff00)
             embed.add_field(name="Ingredients", value="\u200b \t 1x Therizino Egg \n \t 1x Citronal \n \t 1x Angler Gel \n \t 2x Mejoberries \n \t 3x Fiber \n \t 1x Waterskin", inline=False)
